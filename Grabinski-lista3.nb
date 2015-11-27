@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     65522,       1629]
-NotebookOptionsPosition[     63668,       1566]
-NotebookOutlinePosition[     64076,       1582]
-CellTagsIndexPosition[     64033,       1579]
+NotebookDataLength[     68256,       1834]
+NotebookOptionsPosition[     65652,       1747]
+NotebookOutlinePosition[     66058,       1763]
+CellTagsIndexPosition[     66015,       1760]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -27,9 +27,196 @@ Cell["Exercise 1", "Subtitle",
  CellChangeTimes->{{3.65445272901715*^9, 3.6544527317923083`*^9}, {
   3.6544527650182085`*^9, 3.654452765311226*^9}}],
 
+Cell["We want to proof a theorem for a general 3x3 matrix:", "Text",
+ CellChangeTimes->{{3.657433825140798*^9, 3.6574338363652287`*^9}, {
+  3.657434026811949*^9, 3.6574340271720533`*^9}, {3.6574343482498293`*^9, 
+  3.657434354577615*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", 
+  RowBox[{
+  "A", ",", "a", ",", "b", ",", "c", ",", "d", ",", "e", ",", "f", ",", "g", 
+   ",", "h", ",", "i"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"A", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"d", ",", "e", ",", "f"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"g", ",", "h", ",", "i"}], "}"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FullSimplify", "[", 
+   RowBox[{
+    RowBox[{"MatrixPower", "[", 
+     RowBox[{"A", ",", "3"}], "]"}], "-", 
+    RowBox[{
+     RowBox[{"Tr", "[", "A", "]"}], 
+     RowBox[{"MatrixPower", "[", 
+      RowBox[{"A", ",", "2"}], "]"}]}], "+", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"Tr", "[", "A", "]"}], ")"}], "2"], "-", 
+       RowBox[{"Tr", "[", 
+        RowBox[{"MatrixPower", "[", 
+         RowBox[{"A", ",", "2"}], "]"}], "]"}]}], ")"}], "A"}], "-", 
+    RowBox[{
+     RowBox[{"Det", "[", "A", "]"}], 
+     RowBox[{"IdentityMatrix", "[", "3", "]"}]}]}], "]"}], "\[Equal]", 
+  "0"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.65743383895373*^9, 3.657433998770459*^9}, {
+  3.657434043841799*^9, 3.6574340736542807`*^9}, {3.6574341036862907`*^9, 
+  3.657434220358508*^9}, {3.6574342603603573`*^9, 3.657434330475429*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "e", ",", "f"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"g", ",", "h", ",", "i"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.657433988924654*^9, 3.6574339995155287`*^9}, {
+   3.657434114097313*^9, 3.65743412790392*^9}, {3.657434160371027*^9, 
+   3.657434220850801*^9}, {3.6574342986356163`*^9, 3.657434331061672*^9}, 
+   3.657434804556232*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}], "\[Equal]", 
+  "0"}]], "Output",
+ CellChangeTimes->{{3.657433988924654*^9, 3.6574339995155287`*^9}, {
+   3.657434114097313*^9, 3.65743412790392*^9}, {3.657434160371027*^9, 
+   3.657434220850801*^9}, {3.6574342986356163`*^9, 3.657434331061672*^9}, 
+   3.657434804557181*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell["Exercise 2", "Subtitle",
  CellChangeTimes->{{3.65445272901715*^9, 3.6544527317923083`*^9}, {
   3.654452766005265*^9, 3.654452766136273*^9}}],
+
+Cell["We want to proof a theorem for two general 2x2 matrices:", "Text",
+ CellChangeTimes->{{3.657434636967907*^9, 3.657434648319399*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", 
+  RowBox[{
+  "A", ",", "B", ",", "a", ",", "b", ",", "c", ",", "d", ",", "e", ",", "f", 
+   ",", "g", ",", "h"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"A", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"c", ",", "d"}], "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"B", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"e", ",", "f"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"g", ",", "h"}], "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FullSimplify", "[", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Tr", "[", 
+       RowBox[{"A", ".", "B"}], "]"}], "-", 
+      RowBox[{
+       RowBox[{"Tr", "[", "A", "]"}], 
+       RowBox[{"Tr", "[", "B", "]"}]}]}], ")"}], "+", 
+    RowBox[{
+     RowBox[{"Tr", "[", "B", "]"}], "A"}], "+", 
+    RowBox[{
+     RowBox[{"Tr", "[", "A", "]"}], "B"}], "-", 
+    RowBox[{"A", ".", "B"}], "-", 
+    RowBox[{"B", ".", "A"}]}], "]"}], "//", "MatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.6574343642122*^9, 3.65743445009337*^9}, {
+  3.657434480172512*^9, 3.657434590605905*^9}, {3.657434705563202*^9, 
+  3.657434753501245*^9}, {3.657434794152236*^9, 3.657434794472053*^9}, {
+  3.657434960475213*^9, 3.657434970058632*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c", ",", "d"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6574345422836733`*^9, 3.6574345910946913`*^9}, {
+  3.657434719134989*^9, 3.657434749325626*^9}, {3.65743478460211*^9, 
+  3.6574348082339077`*^9}, {3.6574349624425907`*^9, 3.657434970446824*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"e", ",", "f"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"g", ",", "h"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6574345422836733`*^9, 3.6574345910946913`*^9}, {
+  3.657434719134989*^9, 3.657434749325626*^9}, {3.65743478460211*^9, 
+  3.6574348082339077`*^9}, {3.6574349624425907`*^9, 3.657434970447805*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "d"}], " ", "e"}], "+", 
+       RowBox[{"c", " ", "f"}], "+", 
+       RowBox[{"b", " ", "g"}], "-", 
+       RowBox[{"a", " ", "h"}]}]},
+     {
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "d"}], " ", "e"}], "+", 
+       RowBox[{"c", " ", "f"}], "+", 
+       RowBox[{"b", " ", "g"}], "-", 
+       RowBox[{"a", " ", "h"}]}], "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.6574345422836733`*^9, 3.6574345910946913`*^9}, {
+  3.657434719134989*^9, 3.657434749325626*^9}, {3.65743478460211*^9, 
+  3.6574348082339077`*^9}, {3.6574349624425907`*^9, 3.657434970448927*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Exercise 3", "Subtitle",
  CellChangeTimes->{{3.65445272901715*^9, 3.6544527317923083`*^9}, {
@@ -181,6 +368,7 @@ Cell[BoxData[
     RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
   "}"}]], "Output",
  CellChangeTimes->{{3.6544532267336173`*^9, 3.6544532435825815`*^9}}]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -188,6 +376,839 @@ Cell[CellGroupData[{
 Cell["Exercise 4", "Subtitle",
  CellChangeTimes->{{3.65445272901715*^9, 3.6544527317923083`*^9}, {
   3.65445276870942*^9, 3.6544527688924303`*^9}}],
+
+Cell["\<\
+We present a table witch names of European Capital Cities and their \
+temperature:\
+\>", "Text",
+ CellChangeTimes->{{3.657433565951057*^9, 3.657433612862977*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"TmpCapt", "=", 
+   RowBox[{"CountryData", "[", 
+    RowBox[{"\"\<Europe\>\"", ",", "\"\<CapitalCity\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TC", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"TmpCapt", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"Length", "[", "TmpCapt", "]"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tc", "[", "u_", "]"}], ":=", 
+   RowBox[{"WeatherData", "[", 
+    RowBox[{"u", ",", "\"\<Temperature\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FinalCT", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"tc", ",", "TC"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FinalData", "=", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{"{", 
+     RowBox[{"TC", ",", "FinalCT"}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"FinalData", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{"\"\< \>\"", ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "1", ",", 
+          RowBox[{"Length", "[", "FinalData", "]"}]}], "}"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\< \>\"", ",", "\"\< \>\""}], "}"}]}], "}"}]}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6556189644220543`*^9, 3.6556189779813213`*^9}, {
+  3.655619226403606*^9, 3.655619228124156*^9}, {3.655619259699404*^9, 
+  3.6556193033886833`*^9}, {3.6556193471957903`*^9, 3.65561938016257*^9}, {
+  3.655619490043952*^9, 3.6556194943472357`*^9}, {3.6556196292108307`*^9, 
+  3.655619712072872*^9}, {3.655619753808996*^9, 3.655619762303832*^9}, {
+  3.655619911297825*^9, 3.655619924874175*^9}, {3.655620002482253*^9, 
+  3.655620085112775*^9}, {3.6556201151290073`*^9, 3.6556201610751553`*^9}, {
+  3.65562019891299*^9, 3.655620268094*^9}, {3.6556203373187838`*^9, 
+  3.6556203426364326`*^9}, {3.655620441197212*^9, 3.655620476475068*^9}, {
+  3.655620524908445*^9, 3.655620526524847*^9}, {3.6556205768297167`*^9, 
+  3.655620605682767*^9}, {3.655621019512514*^9, 3.655621021244762*^9}, {
+  3.655621087084189*^9, 3.6556211633913403`*^9}, {3.657433536611055*^9, 
+  3.657433552419685*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\" \"\>",
+       HoldForm], 
+      TagBox["\<\" \"\>",
+       HoldForm]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Tirana\"\>", 
+      TemplateBox[{"13.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"AndorraLaVella\"\>", 
+      TemplateBox[{"8.5`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Vienna\"\>", 
+      TemplateBox[{"0.4`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Minsk\"\>", 
+      TemplateBox[{RowBox[{"-", "1.1`"}]},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Brussels\"\>", 
+      TemplateBox[{"5.4`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Sarajevo\"\>", 
+      TemplateBox[{"1.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Sofia\"\>", 
+      TemplateBox[{"6.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Zagreb\"\>", 
+      TemplateBox[{"2.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Nicosia\"\>", 
+      TemplateBox[{"21.4`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Prague\"\>", 
+      TemplateBox[{RowBox[{"-", "0.1`"}]},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Copenhagen\"\>", 
+      TemplateBox[{"4.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Tallinn\"\>", 
+      TemplateBox[{"3.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Torshavn\"\>", 
+      TemplateBox[{"3.5`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Helsinki\"\>", 
+      TemplateBox[{"5.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Paris\"\>", 
+      TemplateBox[{"8.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Berlin\"\>", 
+      TemplateBox[{"2.6`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Gibraltar\"\>", 
+      TemplateBox[{"14.6`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Athens\"\>", 
+      TemplateBox[{"19.8`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"SaintPeterPort\"\>", 
+      TemplateBox[{"12.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Budapest\"\>", 
+      TemplateBox[{"0.5`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Reykjavik\"\>", 
+      TemplateBox[{"3.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Dublin\"\>", 
+      TemplateBox[{"9.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Douglas\"\>", 
+      TemplateBox[{"10.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Rome\"\>", 
+      TemplateBox[{"6.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"SaintHelier\"\>", 
+      TemplateBox[{"11.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Pristina\"\>", 
+      TemplateBox[{"4.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Riga\"\>", 
+      TemplateBox[{"0.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Vaduz\"\>", 
+      TemplateBox[{"0.8`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Vilnius\"\>", 
+      TemplateBox[{"0.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Luxemburg\"\>", 
+      TemplateBox[{"4.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Skopje\"\>", 
+      TemplateBox[{"7.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Valletta\"\>", 
+      TemplateBox[{"15.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Chisinau\"\>", 
+      TemplateBox[{"3.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"MonacoVille\"\>", 
+      TemplateBox[{"9.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Podgorica\"\>", 
+      TemplateBox[{"10.8`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Amsterdam\"\>", 
+      TemplateBox[{"7.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Oslo\"\>", 
+      TemplateBox[{"1.7`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Warsaw\"\>", 
+      TemplateBox[{"0.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Lisbon\"\>", 
+      TemplateBox[{"14.3`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Bucharest\"\>", 
+      TemplateBox[{"3.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"SanMarino\"\>", 
+      TemplateBox[{"14.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Belgrade\"\>", 
+      TemplateBox[{"2.4`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Bratislava\"\>", 
+      TemplateBox[{"1.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Ljubljana\"\>", 
+      TemplateBox[{"0.2`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Madrid\"\>", 
+      TemplateBox[{"11.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Longyearbyen\"\>", 
+      TemplateBox[{RowBox[{"-", "3.9`"}]},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Stockholm\"\>", 
+      TemplateBox[{"4.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Bern\"\>", 
+      TemplateBox[{"1.4`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"Kiev\"\>", 
+      TemplateBox[{"0.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"London\"\>", 
+      TemplateBox[{"9.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]},
+     {
+      TagBox["\<\" \"\>",
+       HoldForm], "\<\"VaticanCity\"\>", 
+      TemplateBox[{"6.`"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"\[Degree]C\""}], 
+             "QuantityUnitTraditionalLabel"]}], ShowStringCharacters -> 
+          False], "Unit: degrees Celsius"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {{
+      " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", 
+       " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", 
+       " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", 
+       " ", " ", " ", " ", " ", " ", " ", " ", " "}, {" ", " "}}]]]], "Output",\
+
+ CellChangeTimes->{{3.655619288973795*^9, 3.655619303783081*^9}, {
+   3.6556193603249273`*^9, 3.655619380649067*^9}, {3.655619475833344*^9, 
+   3.6556194949627733`*^9}, {3.655619697078617*^9, 3.655619712535926*^9}, {
+   3.6556197552850857`*^9, 3.655619763305244*^9}, {3.655619915159832*^9, 
+   3.655619925342134*^9}, {3.655620023431538*^9, 3.655620032561768*^9}, {
+   3.6556201451914454`*^9, 3.655620161779604*^9}, 3.6556202686394*^9, {
+   3.6556204628366623`*^9, 3.65562047688922*^9}, 3.655620527251211*^9, 
+   3.655620606535574*^9, 3.65562113549298*^9, 3.6574324280212317`*^9, 
+   3.657433569358189*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Exercise 5", "Subtitle",
  CellChangeTimes->{{3.65445272901715*^9, 3.6544527317923083`*^9}, {
@@ -215,8 +1236,10 @@ Cell[BoxData[{
       RowBox[{"-", "24"}], ",", 
       RowBox[{"13", "-", "\[Lambda]"}]}], "}"}]}], 
    "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Det", "[", "la", "]"}], "\[IndentingNewLine]", 
  RowBox[{"MatrixRank", "[", "la", "]"}]}], "Input",
- CellChangeTimes->{{3.654454062862441*^9, 3.654454144721123*^9}}],
+ CellChangeTimes->{{3.654454062862441*^9, 3.654454144721123*^9}, {
+  3.657435317493143*^9, 3.657435321101363*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -233,10 +1256,20 @@ Cell[BoxData[
     RowBox[{"12", ",", 
      RowBox[{"-", "24"}], ",", 
      RowBox[{"13", "-", "\[Lambda]"}]}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{{3.654454121224779*^9, 3.65445414519715*^9}}],
+ CellChangeTimes->{{3.654454121224779*^9, 3.65445414519715*^9}, 
+   3.6574353215933723`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "1"}], "+", "\[Lambda]", "+", 
+  SuperscriptBox["\[Lambda]", "2"], "-", 
+  SuperscriptBox["\[Lambda]", "3"]}]], "Output",
+ CellChangeTimes->{{3.654454121224779*^9, 3.65445414519715*^9}, 
+   3.657435321594387*^9}],
 
 Cell[BoxData["3"], "Output",
- CellChangeTimes->{{3.654454121224779*^9, 3.6544541451991506`*^9}}]
+ CellChangeTimes->{{3.654454121224779*^9, 3.65445414519715*^9}, 
+   3.657435321595228*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -249,1149 +1282,384 @@ Cell["Exercise 6", "Subtitle",
 Cell[CellGroupData[{
 
 Cell[BoxData[{
- RowBox[{"TmpCapt", "=", 
-  RowBox[{"CountryData", "[", 
-   RowBox[{"\"\<Europe\>\"", ",", "\"\<CapitalCity\>\""}], 
-   "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"TC", "=", 
-  RowBox[{"Table", "[", 
+ RowBox[{
+  RowBox[{"TDigits", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"RealDigits", ",", 
+     RowBox[{"FinalCT", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TDigits", "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", "1"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"EqN", "[", 
+   RowBox[{"n_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{"If", "[", 
    RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"TmpCapt", "[", 
-       RowBox[{"[", "i", "]"}], "]"}], "[", 
-      RowBox[{"[", "2", "]"}], "]"}], "[", 
-     RowBox[{"[", "1", "]"}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"i", ",", "1", ",", 
-      RowBox[{"Length", "[", "TmpCapt", "]"}]}], "}"}]}], 
+    RowBox[{"n", "\[Equal]", "x"}], ",", "1", ",", "0"}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"tc", "[", "u_", "]"}], ":=", 
-  RowBox[{"WeatherData", "[", 
-   RowBox[{"u", ",", "\"\<Temperature\>\""}], "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"FinalCT", "=", 
-  RowBox[{"Map", "[", 
-   RowBox[{"tc", ",", "TC"}], "]"}]}]}], "Input",
- CellChangeTimes->{{3.6556189644220543`*^9, 3.6556189779813213`*^9}, {
-  3.655619226403606*^9, 3.655619228124156*^9}, {3.655619259699404*^9, 
-  3.6556193033886833`*^9}, {3.6556193471957903`*^9, 3.65561938016257*^9}, {
-  3.655619490043952*^9, 3.6556194943472357`*^9}, {3.6556196292108307`*^9, 
-  3.655619712072872*^9}, {3.655619753808996*^9, 3.655619762303832*^9}, {
-  3.655619911297825*^9, 3.655619924874175*^9}, {3.655620002482253*^9, 
-  3.655620085112775*^9}, {3.6556201151290073`*^9, 3.6556201610751553`*^9}, {
-  3.65562019891299*^9, 3.655620268094*^9}, {3.6556203373187838`*^9, 
-  3.6556203426364326`*^9}, {3.655620441197212*^9, 3.655620476475068*^9}, {
-  3.655620524908445*^9, 3.655620526524847*^9}, {3.6556205768297167`*^9, 
-  3.655620605682767*^9}, {3.655621019512514*^9, 3.655621021244762*^9}, {
-  3.655621087084189*^9, 3.6556211633913403`*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   TemplateBox[{"\"Tirana\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Tirana\"", ",", "\"Tirana\"", ",", "\"Albania\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Tirana\\\", \\\"Tirana\\\", \
-\\\"Albania\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Andorra la Vella\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"AndorraLaVella\"", ",", "\"AndorraLaVella\"", ",", 
-             "\"Andorra\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"AndorraLaVella\\\", \\\"AndorraLaVella\\\", \
-\\\"Andorra\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Vienna\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Vienna\"", ",", "\"Vienna\"", ",", "\"Austria\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Vienna\\\", \\\"Vienna\\\", \
-\\\"Austria\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Minsk\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Minsk\"", ",", "\"Minsk\"", ",", "\"Belarus\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Minsk\\\", \\\"Minsk\\\", \\\"Belarus\\\"}]\
-\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Brussels\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Brussels\"", ",", "\"Brussels\"", ",", "\"Belgium\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Brussels\\\", \\\"Brussels\\\", \\\"Belgium\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Sarajevo\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Sarajevo\"", ",", "\"FederacijaBosnaIHercegovina\"", 
-             ",", "\"BosniaHerzegovina\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Sarajevo\\\", \
-\\\"FederacijaBosnaIHercegovina\\\", \\\"BosniaHerzegovina\\\"}]\"",
-     "\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Sofia\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Sofia\"", ",", "\"SofijaGrad\"", ",", "\"Bulgaria\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Sofia\\\", \\\"SofijaGrad\\\", \\\"Bulgaria\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Zagreb\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Zagreb\"", ",", "\"GradZagreb\"", ",", "\"Croatia\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Zagreb\\\", \\\"GradZagreb\\\", \\\"Croatia\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Nicosia\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Nicosia\"", ",", "\"Nicosia\"", ",", "\"Cyprus\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Nicosia\\\", \\\"Nicosia\\\", \
-\\\"Cyprus\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Prague\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Prague\"", ",", "\"Prague\"", ",", 
-             "\"CzechRepublic\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Prague\\\", \\\"Prague\\\", \
-\\\"CzechRepublic\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Copenhagen\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Copenhagen\"", ",", "\"Copenhagen\"", ",", 
-             "\"Denmark\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Copenhagen\\\", \\\"Copenhagen\\\", \
-\\\"Denmark\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Tallinn\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Tallinn\"", ",", "\"Harju\"", ",", "\"Estonia\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Tallinn\\\", \\\"Harju\\\", \
-\\\"Estonia\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Torshavn\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Torshavn\"", ",", "\"Stromo\"", ",", 
-             "\"FaroeIslands\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Torshavn\\\", \\\"Stromo\\\", \
-\\\"FaroeIslands\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Helsinki\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Helsinki\"", ",", "\"Uusimaa\"", ",", "\"Finland\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Helsinki\\\", \\\"Uusimaa\\\", \
-\\\"Finland\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Paris\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Paris\"", ",", "\"IleDeFrance\"", ",", "\"France\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Paris\\\", \\\"IleDeFrance\\\", \
-\\\"France\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Berlin\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Berlin\"", ",", "\"Berlin\"", ",", "\"Germany\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Berlin\\\", \\\"Berlin\\\", \
-\\\"Germany\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Gibraltar\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Gibraltar\"", ",", "\"Gibraltar\"", ",", 
-             "\"Gibraltar\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Gibraltar\\\", \\\"Gibraltar\\\", \
-\\\"Gibraltar\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Athens\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Athens\"", ",", "\"Attiki\"", ",", "\"Greece\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Athens\\\", \\\"Attiki\\\", \
-\\\"Greece\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Saint Peter Port\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"SaintPeterPort\"", ",", "\"SaintPeterPort\"", ",", 
-             "\"Guernsey\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"SaintPeterPort\\\", \\\"SaintPeterPort\\\", \
-\\\"Guernsey\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Budapest\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Budapest\"", ",", "\"Budapest\"", ",", "\"Hungary\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Budapest\\\", \\\"Budapest\\\", \\\"Hungary\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Reykjavik\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Reykjavik\"", ",", "\"Hofudhborgarsvaedhi\"", ",", 
-             "\"Iceland\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Reykjavik\\\", \\\"Hofudhborgarsvaedhi\\\", \
-\\\"Iceland\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Dublin\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Dublin\"", ",", "\"Dublin\"", ",", "\"Ireland\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Dublin\\\", \\\"Dublin\\\", \
-\\\"Ireland\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Douglas\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Douglas\"", ",", "\"Douglas\"", ",", "\"IsleOfMan\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Douglas\\\", \\\"Douglas\\\", \\\"IsleOfMan\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Rome\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Rome\"", ",", "\"Lazio\"", ",", "\"Italy\""}], "}"}]}], 
-       "]"}],"\"Entity[\\\"City\\\", {\\\"Rome\\\", \\\"Lazio\\\", \
-\\\"Italy\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Saint Helier\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"SaintHelier\"", ",", "\"SaintHelier\"", ",", 
-             "\"Jersey\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"SaintHelier\\\", \\\"SaintHelier\\\", \
-\\\"Jersey\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Pristina\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Pristina\"", ",", "\"Pristina\"", ",", "\"Kosovo\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Pristina\\\", \\\"Pristina\\\", \
-\\\"Kosovo\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Riga\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Riga\"", ",", "\"Riga\"", ",", "\"Latvia\""}], "}"}]}], 
-       "]"}],"\"Entity[\\\"City\\\", {\\\"Riga\\\", \\\"Riga\\\", \
-\\\"Latvia\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Vaduz\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Vaduz\"", ",", "\"Vaduz\"", ",", "\"Liechtenstein\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Vaduz\\\", \\\"Vaduz\\\", \\\"Liechtenstein\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Vilnius\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Vilnius\"", ",", "\"Vilniaus\"", ",", "\"Lithuania\""}],
-            "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Vilnius\\\", \\\"Vilniaus\\\", \
-\\\"Lithuania\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Luxemburg\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Luxemburg\"", ",", "\"Luxembourg\"", ",", 
-             "\"Luxembourg\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Luxemburg\\\", \\\"Luxembourg\\\", \
-\\\"Luxembourg\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Skopje\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Skopje\"", ",", "\"Skopje\"", ",", "\"Macedonia\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Skopje\\\", \\\"Skopje\\\", \\\"Macedonia\\\
-\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Valletta\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Valletta\"", ",", "\"Valletta\"", ",", "\"Malta\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Valletta\\\", \\\"Valletta\\\", \\\"Malta\\\
-\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Chisinau\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Chisinau\"", ",", "\"Chisinau\"", ",", "\"Moldova\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Chisinau\\\", \\\"Chisinau\\\", \\\"Moldova\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Monaco\[Hyphen]Ville\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"MonacoVille\"", ",", "\"Monaco\"", ",", "\"Monaco\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"MonacoVille\\\", \\\"Monaco\\\", \\\"Monaco\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Podgorica\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Podgorica\"", ",", "\"Podgorica\"", ",", 
-             "\"Montenegro\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Podgorica\\\", \\\"Podgorica\\\", \
-\\\"Montenegro\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Amsterdam\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Amsterdam\"", ",", "\"NoordHolland\"", ",", 
-             "\"Netherlands\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Amsterdam\\\", \\\"NoordHolland\\\", \
-\\\"Netherlands\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Oslo\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Oslo\"", ",", "\"Oslo\"", ",", "\"Norway\""}], "}"}]}], 
-       "]"}],"\"Entity[\\\"City\\\", {\\\"Oslo\\\", \\\"Oslo\\\", \
-\\\"Norway\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Warsaw\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Warsaw\"", ",", "\"Mazowieckie\"", ",", "\"Poland\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Warsaw\\\", \\\"Mazowieckie\\\", \\\"Poland\
-\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Lisbon\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Lisbon\"", ",", "\"Lisboa\"", ",", "\"Portugal\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Lisbon\\\", \\\"Lisboa\\\", \
-\\\"Portugal\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Bucharest\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Bucharest\"", ",", "\"Bucharest\"", ",", 
-             "\"Romania\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Bucharest\\\", \\\"Bucharest\\\", \
-\\\"Romania\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"San Marino\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"SanMarino\"", ",", "\"SanMarino\"", ",", 
-             "\"SanMarino\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"SanMarino\\\", \\\"SanMarino\\\", \
-\\\"SanMarino\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Belgrade\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Belgrade\"", ",", "\"CentralSerbia\"", ",", 
-             "\"Serbia\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Belgrade\\\", \\\"CentralSerbia\\\", \
-\\\"Serbia\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Bratislava\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Bratislava\"", ",", "\"Bratislavsky\"", ",", 
-             "\"Slovakia\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Bratislava\\\", \\\"Bratislavsky\\\", \
-\\\"Slovakia\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Ljubljana\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Ljubljana\"", ",", "\"Osrednjeslovenska\"", ",", 
-             "\"Slovenia\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Ljubljana\\\", \\\"Osrednjeslovenska\\\", \
-\\\"Slovenia\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Madrid\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Madrid\"", ",", "\"Madrid\"", ",", "\"Spain\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Madrid\\\", \\\"Madrid\\\", \\\"Spain\\\"}]\
-\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Longyearbyen\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"Longyearbyen\"", ",", "\"Svalbard\"", ",", 
-             "\"Svalbard\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Longyearbyen\\\", \\\"Svalbard\\\", \
-\\\"Svalbard\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Stockholm\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Stockholm\"", ",", "\"Stockholm\"", ",", "\"Sweden\""}],
-            "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Stockholm\\\", \\\"Stockholm\\\", \
-\\\"Sweden\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Bern\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Bern\"", ",", "\"Bern\"", ",", "\"Switzerland\""}], 
-           "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"Bern\\\", \\\"Bern\\\", \
-\\\"Switzerland\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Kyiv\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           RowBox[{"\"Kiev\"", ",", "\"Kiev\"", ",", "\"Ukraine\""}], "}"}]}],
-        "]"}],"\"Entity[\\\"City\\\", {\\\"Kiev\\\", \\\"Kiev\\\", \
-\\\"Ukraine\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"London\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"London\"", ",", "\"GreaterLondon\"", ",", 
-             "\"UnitedKingdom\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"London\\\", \\\"GreaterLondon\\\", \
-\\\"UnitedKingdom\\\"}]\"","\"city\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Vatican City\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"City\"", ",", 
-         RowBox[{"{", 
-           
-           RowBox[{"\"VaticanCity\"", ",", "\"VaticanCity\"", ",", 
-             "\"VaticanCity\""}], "}"}]}], "]"}],
-     "\"Entity[\\\"City\\\", {\\\"VaticanCity\\\", \\\"VaticanCity\\\", \
-\\\"VaticanCity\\\"}]\"","\"city\""},
-    "Entity"]}], "}"}]], "Output",
- CellChangeTimes->{{3.655619288973795*^9, 3.655619303783081*^9}, {
-   3.6556193603249273`*^9, 3.655619380649067*^9}, {3.655619475833344*^9, 
-   3.6556194949627733`*^9}, {3.655619697078617*^9, 3.655619712535926*^9}, {
-   3.6556197552850857`*^9, 3.655619763305244*^9}, {3.655619915159832*^9, 
-   3.655619925342134*^9}, {3.655620023431538*^9, 3.655620032561768*^9}, {
-   3.6556201451914454`*^9, 3.655620161779604*^9}, 3.6556202686394*^9, {
-   3.6556204628366623`*^9, 3.65562047688922*^9}, 3.655620527251211*^9, 
-   3.655620606535574*^9, 3.65562113549298*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"\<\"Tirana\"\>", ",", "\<\"AndorraLaVella\"\>", 
-   ",", "\<\"Vienna\"\>", ",", "\<\"Minsk\"\>", ",", "\<\"Brussels\"\>", 
-   ",", "\<\"Sarajevo\"\>", ",", "\<\"Sofia\"\>", ",", "\<\"Zagreb\"\>", 
-   ",", "\<\"Nicosia\"\>", ",", "\<\"Prague\"\>", ",", "\<\"Copenhagen\"\>", 
-   ",", "\<\"Tallinn\"\>", ",", "\<\"Torshavn\"\>", ",", "\<\"Helsinki\"\>", 
-   ",", "\<\"Paris\"\>", ",", "\<\"Berlin\"\>", ",", "\<\"Gibraltar\"\>", 
-   ",", "\<\"Athens\"\>", ",", "\<\"SaintPeterPort\"\>", 
-   ",", "\<\"Budapest\"\>", ",", "\<\"Reykjavik\"\>", ",", "\<\"Dublin\"\>", 
-   ",", "\<\"Douglas\"\>", ",", "\<\"Rome\"\>", ",", "\<\"SaintHelier\"\>", 
-   ",", "\<\"Pristina\"\>", ",", "\<\"Riga\"\>", ",", "\<\"Vaduz\"\>", 
-   ",", "\<\"Vilnius\"\>", ",", "\<\"Luxemburg\"\>", ",", "\<\"Skopje\"\>", 
-   ",", "\<\"Valletta\"\>", ",", "\<\"Chisinau\"\>", 
-   ",", "\<\"MonacoVille\"\>", ",", "\<\"Podgorica\"\>", 
-   ",", "\<\"Amsterdam\"\>", ",", "\<\"Oslo\"\>", ",", "\<\"Warsaw\"\>", 
-   ",", "\<\"Lisbon\"\>", ",", "\<\"Bucharest\"\>", ",", "\<\"SanMarino\"\>", 
-   ",", "\<\"Belgrade\"\>", ",", "\<\"Bratislava\"\>", 
-   ",", "\<\"Ljubljana\"\>", ",", "\<\"Madrid\"\>", 
-   ",", "\<\"Longyearbyen\"\>", ",", "\<\"Stockholm\"\>", ",", "\<\"Bern\"\>",
-    ",", "\<\"Kiev\"\>", ",", "\<\"London\"\>", ",", "\<\"VaticanCity\"\>"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.655619288973795*^9, 3.655619303783081*^9}, {
-   3.6556193603249273`*^9, 3.655619380649067*^9}, {3.655619475833344*^9, 
-   3.6556194949627733`*^9}, {3.655619697078617*^9, 3.655619712535926*^9}, {
-   3.6556197552850857`*^9, 3.655619763305244*^9}, {3.655619915159832*^9, 
-   3.655619925342134*^9}, {3.655620023431538*^9, 3.655620032561768*^9}, {
-   3.6556201451914454`*^9, 3.655620161779604*^9}, 3.6556202686394*^9, {
-   3.6556204628366623`*^9, 3.65562047688922*^9}, 3.655620527251211*^9, 
-   3.655620606535574*^9, 3.655621135522771*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   TemplateBox[{"18.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"13.9`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"3.6`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"5.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"14.6`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"7.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"11.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"11.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"23.4`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"1.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"6.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"9.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"5.6`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"9.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"13.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"4.4`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"18.5`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"19.6`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"14.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"6.4`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"3.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"10.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"11.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"17.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"14.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"8.7`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"8.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"7.6`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"3.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"9.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"9.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"22.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"11.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"18.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"14.3`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"12.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"4.3`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"8.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"16.6`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"15.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"11.7`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"7.6`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"7.7`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"8.3`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"12.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{RowBox[{"-", "5.9`"}]},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"9.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"9.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"10.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"13.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )], ",", 
-   TemplateBox[{"17.`"},
-    "QuantityUnit",
-    DisplayFunction->(TooltipBox[
-      StyleBox[
-       RowBox[{#, "\[InvisibleSpace]", 
-         StyleBox[
-          RowBox[{" ", "\"\[Degree]C\""}], "QuantityUnitTraditionalLabel"]}], 
-       ShowStringCharacters -> False], "Unit: degrees Celsius"]& ),
-    InterpretationFunction->(RowBox[{"Quantity", "[", 
-       RowBox[{#, ",", "\"DegreesCelsius\""}], "]"}]& )]}], "}"}]], "Output",
- CellChangeTimes->{{3.655619288973795*^9, 3.655619303783081*^9}, {
-   3.6556193603249273`*^9, 3.655619380649067*^9}, {3.655619475833344*^9, 
-   3.6556194949627733`*^9}, {3.655619697078617*^9, 3.655619712535926*^9}, {
-   3.6556197552850857`*^9, 3.655619763305244*^9}, {3.655619915159832*^9, 
-   3.655619925342134*^9}, {3.655620023431538*^9, 3.655620032561768*^9}, {
-   3.6556201451914454`*^9, 3.655620161779604*^9}, 3.6556202686394*^9, {
-   3.6556204628366623`*^9, 3.65562047688922*^9}, 3.655620527251211*^9, 
-   3.655620606535574*^9, 3.655621150201372*^9}],
-
-Cell[BoxData[
- GraphicsBox[{
-   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`], 
-    AbsoluteThickness[1.6], {
-     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-      0.019444444444444445`], AbsoluteThickness[1.6], Opacity[0.2], LineBox[{},
-       VertexColors->None]}, 
-     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-      0.019444444444444445`], AbsoluteThickness[1.6], Opacity[0.2], 
-      LineBox[{{{1., 0.30102999566398114`}, {1., 0}}, {{2., 
-         0.1760912590556812}, {2., 0}}, {{3., 0.1249387366082999}, {
-         3., 0}}, {{4., 0.0969100130080564}, {4., 0}}, {{5., 
-         0.0791812460476248}, {5., 0}}, {{6., 0.06694678963061321}, {
-         6., 0}}, {{7., 0.057991946977686726`}, {7., 0}}, {{8., 
-         0.051152522447381284`}, {8., 0}}, {{9., 0.04575749056067514}, {
-         9., 0}}},
-       VertexColors->None]}}}, 
-   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`], 
-    AbsoluteThickness[1.6], {}, 
-    PointBox[{{1., 0.30102999566398114`}, {2., 0.1760912590556812}, {3., 
-     0.1249387366082999}, {4., 0.0969100130080564}, {5., 
-     0.0791812460476248}, {6., 0.06694678963061321}, {7., 
-     0.057991946977686726`}, {8., 0.051152522447381284`}, {9., 
-     0.04575749056067514}}], {}}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->True,
-  AxesOrigin->{1, 0},
-  BaseStyle->{FontFamily -> "Arial"},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  Method->{
-   "MessagesHead" -> DiscretePlot, "AxisPadding" -> Scaled[0.02], 
-    "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> {
-      Directive[
-       RGBColor[0.368417, 0.506779, 0.709798], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.880722, 0.611041, 0.142051], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.560181, 0.691569, 0.194885], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.922526, 0.385626, 0.209179], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.528488, 0.470624, 0.701351], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.772079, 0.431554, 0.102387], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.363898, 0.618501, 0.782349], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[1, 0.75, 0], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.647624, 0.37816, 0.614037], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.571589, 0.586483, 0.], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.915, 0.3325, 0.2125], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
-       AbsoluteThickness[1.6]]}, "DomainPadding" -> Scaled[0.02], 
-    "RangePadding" -> Scaled[0.05]},
-  PlotRange->{{1, 9}, {0, 0.30102999566398114`}},
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.02], 
-     Scaled[0.02]}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{{3.655619288973795*^9, 3.655619303783081*^9}, {
-   3.6556193603249273`*^9, 3.655619380649067*^9}, {3.655619475833344*^9, 
-   3.6556194949627733`*^9}, {3.655619697078617*^9, 3.655619712535926*^9}, {
-   3.6556197552850857`*^9, 3.655619763305244*^9}, {3.655619915159832*^9, 
-   3.655619925342134*^9}, {3.655620023431538*^9, 3.655620032561768*^9}, {
-   3.6556201451914454`*^9, 3.655620161779604*^9}, 3.6556202686394*^9, {
-   3.6556204628366623`*^9, 3.65562047688922*^9}, 3.655620527251211*^9, 
-   3.655620606535574*^9, 3.655621150577726*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{"Plot", "[", 
-  RowBox[{
-   RowBox[{"Log10", "[", 
-    RowBox[{"1", "+", 
-     RowBox[{"1", "/", "x"}]}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"x", ",", "2", ",", "10"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
- RowBox[{"DiscretePlot", "[", 
-  RowBox[{
-   RowBox[{"Log10", "[", 
-    RowBox[{"1", "+", 
-     RowBox[{"1", "/", "i"}]}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"i", ",", "1", ",", "9"}], "}"}]}], "]"}]}], "Input",
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Sum", "[", 
+     RowBox[{
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{"Eqn", "[", 
+         RowBox[{"k", ",", "#"}], "]"}], ",", 
+        RowBox[{"TDigits", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "]"}]}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"k", ",", "1", ",", "9"}], "}"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Temps", "=", 
+  RowBox[{"DiscretePlot", "[", 
+   RowBox[{",", 
+    RowBox[{"Ticks", "\[Rule]", 
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "9", ",", "1"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Theorem", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Log10", "[", 
+      RowBox[{"1", "+", 
+       RowBox[{"1", "/", "x"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "2", ",", "10"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", "Theorem", "]"}]}], "Input",
  CellChangeTimes->{{3.655621172158085*^9, 3.6556211962569437`*^9}, {
-  3.655621233577137*^9, 3.6556212339927483`*^9}}],
+   3.655621233577137*^9, 3.6556212339927483`*^9}, {3.657435166343487*^9, 
+   3.6574351845445766`*^9}, {3.6574352620957727`*^9, 3.657435281632358*^9}, 
+   3.6574354386846943`*^9, {3.657435804513446*^9, 3.657435851532365*^9}, 
+   3.657436313062652*^9, {3.657436352185918*^9, 3.657436459713414*^9}, {
+   3.657436502041088*^9, 3.6574365078570766`*^9}, {3.6574365548318996`*^9, 
+   3.657436601016465*^9}, {3.657436706111768*^9, 3.657436861620229*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "3", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "8", ",", "5", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5", ",", "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "6", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "1", ",", "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "3", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "3", ",", "5", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "8", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "6", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "6", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "9", ",", "8", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "3", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "9", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "6", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "8", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "1"}], "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "7", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "5", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "3", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "9", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "0", ",", "8", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "7", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "7", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "3", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "3", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "3", ",", "9", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "4", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "9", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "6", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.655621197008131*^9, 3.655621234595688*^9, {3.6574351818901787`*^9, 
+   3.657435184956336*^9}, {3.6574367828849792`*^9, 3.657436796893491*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Sum", "::", "argmu"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Sum\\)\[NoBreak] called with 1 argument; \
+\[NoBreak]\\!\\(2\\)\[NoBreak] or more arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argmu\\\", \
+ButtonNote -> \\\"Sum::argmu\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.657436782999041*^9, 3.657436796931923*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Sum", "::", "argmu"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Sum\\)\[NoBreak] called with 1 argument; \
+\[NoBreak]\\!\\(2\\)\[NoBreak] or more arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argmu\\\", \
+ButtonNote -> \\\"Sum::argmu\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.657436782999041*^9, 3.657436796966297*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Sum", "::", "argmu"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Sum\\)\[NoBreak] called with 1 argument; \
+\[NoBreak]\\!\\(2\\)\[NoBreak] or more arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argmu\\\", \
+ButtonNote -> \\\"Sum::argmu\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.657436782999041*^9, 3.657436797001646*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Sum :: \
+argmu\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.657436782999041*^9, 3.657436797002391*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"DiscretePlot", "::", "argr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(DiscretePlot\\)\[NoBreak] called with 1 \
+argument; \[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/DiscretePlot\\\", ButtonNote -> \
+\\\"DiscretePlot::argr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.657436782999041*^9, 3.657436797061304*^9}}],
+
+Cell[BoxData[
+ RowBox[{"DiscretePlot", "[", 
+  RowBox[{"Null", ",", 
+   RowBox[{"Ticks", "\[Rule]", 
+    RowBox[{"Range", "[", 
+     RowBox[{"0", ",", "9", ",", "1"}], "]"}]}]}], "]"}]], "Output",
+ CellChangeTimes->{
+  3.655621197008131*^9, 3.655621234595688*^9, {3.6574351818901787`*^9, 
+   3.657435184956336*^9}, {3.6574367828849792`*^9, 3.657436797062395*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -1447,96 +1715,9 @@ pX7ZJwJn93gwWzeQwE3ly20nCfSx4H0KdZv/9/QVp08RGHAjf0rlSkJHKTXq
      Scaled[0.05], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.655621197008131*^9, 3.655621234595688*^9}],
-
-Cell[BoxData[
- GraphicsBox[{
-   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`], 
-    AbsoluteThickness[1.6], {
-     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-      0.019444444444444445`], AbsoluteThickness[1.6], Opacity[0.2], LineBox[{},
-       VertexColors->None]}, 
-     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-      0.019444444444444445`], AbsoluteThickness[1.6], Opacity[0.2], 
-      LineBox[{{{1., 0.30102999566398114`}, {1., 0}}, {{2., 
-         0.1760912590556812}, {2., 0}}, {{3., 0.1249387366082999}, {
-         3., 0}}, {{4., 0.0969100130080564}, {4., 0}}, {{5., 
-         0.0791812460476248}, {5., 0}}, {{6., 0.06694678963061321}, {
-         6., 0}}, {{7., 0.057991946977686726`}, {7., 0}}, {{8., 
-         0.051152522447381284`}, {8., 0}}, {{9., 0.04575749056067514}, {
-         9., 0}}},
-       VertexColors->None]}}}, 
-   {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`], 
-    AbsoluteThickness[1.6], {}, 
-    PointBox[{{1., 0.30102999566398114`}, {2., 0.1760912590556812}, {3., 
-     0.1249387366082999}, {4., 0.0969100130080564}, {5., 
-     0.0791812460476248}, {6., 0.06694678963061321}, {7., 
-     0.057991946977686726`}, {8., 0.051152522447381284`}, {9., 
-     0.04575749056067514}}], {}}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->True,
-  AxesOrigin->{1, 0},
-  BaseStyle->{FontFamily -> "Arial"},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  Method->{
-   "MessagesHead" -> DiscretePlot, "AxisPadding" -> Scaled[0.02], 
-    "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> {
-      Directive[
-       RGBColor[0.368417, 0.506779, 0.709798], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.880722, 0.611041, 0.142051], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.560181, 0.691569, 0.194885], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.922526, 0.385626, 0.209179], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.528488, 0.470624, 0.701351], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.772079, 0.431554, 0.102387], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.363898, 0.618501, 0.782349], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[1, 0.75, 0], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.647624, 0.37816, 0.614037], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.571589, 0.586483, 0.], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.915, 0.3325, 0.2125], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
-       AbsoluteThickness[1.6]], 
-      Directive[
-       RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965], 
-       AbsoluteThickness[1.6]]}, "DomainPadding" -> Scaled[0.02], 
-    "RangePadding" -> Scaled[0.05]},
-  PlotRange->{{1, 9}, {0, 0.30102999566398114`}},
-  PlotRangePadding->{{
-     Scaled[0.02], 
-     Scaled[0.02]}, {
-     Scaled[0.02], 
-     Scaled[0.02]}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.655621197008131*^9, 3.6556212348570137`*^9}]
+ CellChangeTimes->{
+  3.655621197008131*^9, 3.655621234595688*^9, {3.6574351818901787`*^9, 
+   3.657435184956336*^9}, {3.6574367828849792`*^9, 3.657436797110203*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1565,7 +1746,7 @@ Cell["Exercise 9", "Subtitle",
 }, Open  ]]
 },
 WindowSize->{1317, 669},
-WindowMargins->{{Automatic, 198}, {Automatic, 116}},
+WindowMargins->{{167, Automatic}, {Automatic, 8}},
 FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
 StyleDefinitions->FrontEnd`FileName[{"Report"}, "StandardReport.nb", 
   CharacterEncoding -> "UTF-8"]
@@ -1584,51 +1765,75 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 94, 1, 83, "Title"],
 Cell[677, 25, 148, 2, 28, "Subtitle"],
-Cell[828, 29, 146, 2, 28, "Subtitle"],
-Cell[977, 33, 147, 2, 28, "Subtitle"],
-Cell[1127, 37, 162, 3, 31, "Text"],
+Cell[828, 29, 238, 3, 31, "Text"],
 Cell[CellGroupData[{
-Cell[1314, 44, 1052, 28, 86, "Input"],
-Cell[2369, 74, 717, 20, 41, "Output"],
-Cell[3089, 96, 98, 1, 41, "Output"],
-Cell[3190, 99, 645, 17, 41, "Output"]
+Cell[1091, 36, 1435, 40, 142, "Input"],
+Cell[2529, 78, 501, 12, 41, "Output"],
+Cell[3033, 92, 541, 14, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3872, 121, 878, 22, 86, "Input"],
-Cell[4753, 145, 597, 15, 41, "Output"],
-Cell[5353, 162, 96, 1, 41, "Output"],
-Cell[5452, 165, 645, 17, 41, "Output"]
-}, Open  ]],
+Cell[3611, 111, 146, 2, 28, "Subtitle"],
+Cell[3760, 115, 138, 1, 31, "Text"],
 Cell[CellGroupData[{
-Cell[6134, 187, 147, 2, 28, "Subtitle"],
-Cell[6284, 191, 148, 2, 28, "Subtitle"],
-Cell[6435, 195, 121, 1, 31, "Text"],
-Cell[CellGroupData[{
-Cell[6581, 200, 606, 18, 64, "Input"],
-Cell[7190, 220, 498, 15, 41, "Output"],
-Cell[7691, 237, 96, 1, 41, "Output"]
+Cell[3923, 120, 1336, 38, 108, "Input"],
+Cell[5262, 160, 388, 9, 41, "Output"],
+Cell[5653, 171, 388, 9, 41, "Output"],
+Cell[6044, 182, 1168, 32, 67, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7836, 244, 148, 2, 28, "Subtitle"],
+Cell[7261, 220, 147, 2, 28, "Subtitle"],
+Cell[7411, 224, 162, 3, 31, "Text"],
 Cell[CellGroupData[{
-Cell[8009, 250, 1676, 36, 108, "Input"],
-Cell[9688, 288, 18327, 435, 163, "Output"],
-Cell[28018, 725, 1938, 29, 108, "Output"],
-Cell[29959, 756, 22039, 520, 86, "Output"],
-Cell[52001, 1278, 4031, 94, 246, "Output"]
+Cell[7598, 231, 1052, 28, 86, "Input"],
+Cell[8653, 261, 717, 20, 41, "Output"],
+Cell[9373, 283, 98, 1, 41, "Output"],
+Cell[9474, 286, 645, 17, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[56069, 1377, 577, 16, 64, "Input"],
-Cell[56649, 1395, 2676, 54, 249, "Output"],
-Cell[59328, 1451, 3540, 87, 246, "Output"]
-}, Open  ]],
-Cell[62883, 1541, 274, 6, 41, "Input"]
+Cell[10156, 308, 878, 22, 86, "Input"],
+Cell[11037, 332, 597, 15, 41, "Output"],
+Cell[11637, 349, 96, 1, 41, "Output"],
+Cell[11736, 352, 645, 17, 41, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63194, 1552, 148, 2, 28, "Subtitle"],
-Cell[63345, 1556, 146, 2, 28, "Subtitle"],
-Cell[63494, 1560, 146, 2, 28, "Subtitle"]
+Cell[12430, 375, 147, 2, 28, "Subtitle"],
+Cell[12580, 379, 172, 4, 31, "Text"],
+Cell[CellGroupData[{
+Cell[12777, 387, 2441, 61, 152, "Input"],
+Cell[15221, 450, 28935, 756, 970, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44205, 1212, 148, 2, 28, "Subtitle"],
+Cell[44356, 1216, 121, 1, 31, "Text"],
+Cell[CellGroupData[{
+Cell[44502, 1221, 713, 20, 86, "Input"],
+Cell[45218, 1243, 526, 16, 41, "Output"],
+Cell[45747, 1261, 251, 6, 41, "Output"],
+Cell[46001, 1269, 119, 2, 41, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46169, 1277, 148, 2, 28, "Subtitle"],
+Cell[CellGroupData[{
+Cell[46342, 1283, 2197, 61, 174, "Input"],
+Cell[48542, 1346, 10508, 244, 394, "Output"],
+Cell[59053, 1592, 520, 10, 23, "Message"],
+Cell[59576, 1604, 520, 10, 23, "Message"],
+Cell[60099, 1616, 520, 10, 23, "Message"],
+Cell[60622, 1628, 551, 11, 23, "Message"],
+Cell[61176, 1641, 528, 10, 23, "Message"],
+Cell[61707, 1653, 363, 8, 41, "Output"],
+Cell[62073, 1663, 2779, 56, 249, "Output"]
+}, Open  ]],
+Cell[64867, 1722, 274, 6, 41, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[65178, 1733, 148, 2, 28, "Subtitle"],
+Cell[65329, 1737, 146, 2, 28, "Subtitle"],
+Cell[65478, 1741, 146, 2, 28, "Subtitle"]
 }, Open  ]]
 }, Open  ]]
 }
